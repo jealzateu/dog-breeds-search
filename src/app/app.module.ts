@@ -9,11 +9,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { BreedSelectorComponent } from './components/breed-selector/breed-selector.component';
+import { DogDisplayComponent } from './components/dog-display/dog-display.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BreedSelectorComponent
+    BreedSelectorComponent,
+    DogDisplayComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,9 @@
+<div class="display-container" *ngIf="images.length > 0">
+    <h2>{{ breed | titlecase }} <span *ngIf="subBreed"> - {{ subBreed | titlecase }}</span></h2>
+    <div class="image-grid">
+      <img *ngFor="let img of images" [src]="img" [alt]="breed" />
+    </div>
+  </div>
+  
+  <p class="no-results" *ngIf="images.length === 0">No images available. Please search for a breed.</p>
+  
