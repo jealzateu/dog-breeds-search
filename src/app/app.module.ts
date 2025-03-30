@@ -10,12 +10,14 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { BreedSelectorComponent } from './components/breed-selector/breed-selector.component';
 import { DogDisplayComponent } from './components/dog-display/dog-display.component';
+import { BreedSearchPageComponent } from './pages/breed-search-page/breed-search-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BreedSelectorComponent,
-    DogDisplayComponent
+    DogDisplayComponent,
+    BreedSearchPageComponent
   ],
   imports: [
     BrowserModule,

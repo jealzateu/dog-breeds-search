@@ -1,0 +1,8 @@
+<div class="breed-search-container">
+    <!-- Breed Selector Component -->
+    <app-breed-selector (breedSelected)="onBreedSelected($event)"></app-breed-selector>
+
+    <!-- Dog Display Component -->
+    <app-dog-display [images]="images" [breed]="breed" [subBreed]="subBreed"></app-dog-display>
+</div>
+  

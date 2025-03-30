@@ -1,23 +1,23 @@
 <div class="selector-container">
-    <!-- Breed Selection -->
-    <mat-form-field appearance="outline">
-      <mat-label>Breed</mat-label>
-      <mat-select [(value)]="selectedBreed" (selectionChange)="onBreedChange($event.value)">
-        <mat-option *ngFor="let breed of breeds" [value]="breed">{{ breed }}</mat-option>
-      </mat-select>
-    </mat-form-field>
-  
-    <!-- Sub-breed Selection (only if available) -->
-    <mat-form-field appearance="outline" *ngIf="subBreeds.length > 0">
-      <mat-label>Sub-breed</mat-label>
-      <mat-select [(value)]="selectedSubBreed">
-        <mat-option *ngFor="let subBreed of subBreeds" [value]="subBreed">{{ subBreed }}</mat-option>
-      </mat-select>
-    </mat-form-field>
-  
-    <!-- Search Button (Enabled only if a breed is selected) -->
-    <button mat-raised-button color="primary" (click)="onSearch()" [disabled]="!selectedBreed">
-      Search
-    </button>
-  </div>
+  <!-- Breed Selection -->
+  <mat-form-field appearance="fill">
+    <mat-label>Breed</mat-label>
+    <mat-select [(value)]="selectedBreed" (selectionChange)="onBreedChange($event.value)">
+      <mat-option *ngFor="let breed of breeds" [value]="breed">{{ breed }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Sub-breed Selection (only if available) -->
+  <mat-form-field appearance="fill" *ngIf="subBreeds.length > 0">
+    <mat-label>Sub-breed</mat-label>
+    <mat-select [(value)]="selectedSubBreed">
+      <mat-option *ngFor="let subBreed of subBreeds" [value]="subBreed">{{ subBreed }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Search Button (Enabled only if a breed is selected) -->
+  <button mat-raised-button color="primary" (click)="onSearch()" [disabled]="!selectedBreed">
+    Search
+  </button>
+</div>
   
