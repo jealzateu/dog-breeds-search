@@ -1,8 +1,15 @@
 <div class="breed-search-container">
     <!-- Breed Selector Component -->
     <app-breed-selector (breedSelected)="onBreedSelected($event)"></app-breed-selector>
-
+  
     <!-- Dog Display Component -->
-    <app-dog-display [images]="images" [breed]="breed" [subBreed]="subBreed"></app-dog-display>
-</div>
+    <app-dog-display [images]="pagedImages" [breed]="breed" [subBreed]="subBreed"></app-dog-display>
+  
+    <!-- Pagination Controls -->
+    <div class="pagination-controls" *ngIf="allImages.length > pageSize">
+      <button (click)="prevPage()" [disabled]="currentPage === 0">Previous</button>
+      <span>Page {{ currentPage + 1 }} of {{ totalPages }}</span>
+      <button (click)="nextPage()" [disabled]="(currentPage + 1) * pageSize >= allImages.length">Next</button>
+    </div>
+  </div>
   

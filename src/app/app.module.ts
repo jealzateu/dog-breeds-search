@@ -8,6 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { BreedSelectorComponent } from './components/breed-selector/breed-selector.component';
 import { DogDisplayComponent } from './components/dog-display/dog-display.component';
 import { BreedSearchPageComponent } from './pages/breed-search-page/breed-search-page.component';
@@ -26,7 +28,10 @@ import { BreedSearchPageComponent } from './pages/breed-search-page/breed-search
     HttpClientModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]
