@@ -47,4 +47,14 @@ export class BreedSelectorComponent implements OnInit {
   onSearch(): void {
     this.breedSelected.emit({ breed: this.selectedBreed, subBreed: this.selectedSubBreed });
   }
+
+  /**
+   * Clears the selected breed and sub-breed.
+   */
+  onClear(): void {
+    this.selectedBreed = '';
+    this.selectedSubBreed = '';
+    this.subBreeds = [];
+    this.breedSelected.emit({ breed: this.selectedBreed, subBreed: this.selectedSubBreed });
+  }
 }

@@ -31,13 +31,16 @@ export class BreedSearchPageComponent {
         this.currentPage = 0;
         this.updatePagedImages();
       });
-    } else {
+    } else if(this.breed) {
       // Fetch images for the main breed
       this.dogApiService.getBreedImages(this.breed).subscribe((data) => {
         this.allImages = data.message;
         this.currentPage = 0;
         this.updatePagedImages();
       });
+    } else {
+      this.allImages = [];
+      this.updatePagedImages();
     }
   }
 

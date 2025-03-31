@@ -15,9 +15,14 @@
     </mat-select>
   </mat-form-field>
 
-  <!-- Search Button (Enabled only if a breed is selected) -->
-  <button mat-raised-button color="primary" (click)="onSearch()" [disabled]="!selectedBreed">
-    Search
-  </button>
+  <!-- Search and Clear Buttons -->
+  <div class="buttons-container">
+    <button mat-raised-button color="primary" (click)="onSearch()" [disabled]="!selectedBreed">
+      Search
+    </button>
+    <button mat-raised-button color="warn" (click)="onClear()" [disabled]="!selectedBreed">
+      Clear
+    </button>
+  </div>
 </div>
   
