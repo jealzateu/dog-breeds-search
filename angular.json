@@ -14,6 +14,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/dog-breeds-search",
+            "baseHref": "/dog-breeds-search/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
